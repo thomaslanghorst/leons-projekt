@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: #ECECEC;
+}
+
+#sidebar {
+    background-color: #2C2C54;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 48px;
+}
+
+.sidebar-item:hover {
+    background-color: #474787;
+    cursor: pointer;
+}
+
+.sidebar-item-active {
+    background-color: #ECECEC;
+}
+
+.sidebar-item-active p {
+    color: black !important; /* !important, weil color: white in sidebar-item p erst darunter definiert wird*/
+    font-weight: 900;
+}
+
+.sidebar-item p {
+    color: white;
+    padding-left: 24px;
+}
+
+/* Reihenfolge wichtig! -> das muss in css unter .sidebar-item definiert werden, sonst greift die height hier nicht */
+.sidebar-sub-item {
+    height: 24px;
+}
+
+.sidebar-sub-item p {
+    font-size: smaller;
+    padding-left: 48px;
+}
+
+#content-container {
+    margin-left: 324px;
+    margin-right: 132px;
+}
